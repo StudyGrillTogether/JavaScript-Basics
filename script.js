@@ -1,3 +1,3 @@
 function greet() {
-    alert("Hello from external js");
+    alert("hello ium an alert from java script");
 }
