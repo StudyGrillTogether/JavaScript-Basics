@@ -16,3 +16,15 @@
 - **in that repository make a html page called index.html**
 - **a button with alert saying "hello i am an alert from javascript" in the external html** 
 - **console message saying hello java script in the html that is internal** 
+
+# Day-2 date-06/07/2025
+
+## theory
+- **what are variables and data types in JS**
+- **learn all different types of fata types in JS**
+- **what is let,const,var in JS and what is the difference between them**
+- **how to find the type of variable in Js**
+# task
+- **create all the different type of variables tha you have learnt in the new webpage**
+- **dsiplay them by writing the data type then the value of that variable and log rtheir values as well and find the type of each in the log**
+
