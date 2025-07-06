@@ -1,15 +1,15 @@
-day-1 date-05/07/2025
---introduction
--setup
--hello
-what is java script? why do we use it ?how does java script work in the webpage
--different ways to implement java script
--how to link js file to html
--consolo.log what and why we use it (common for rest two)
--alert 
--document.right
--can we run javascript without html and css and if yes how ? 
-task1-create a new repository called java script basics  
--in that repository make a html page called index.html
--a button with alert saying "hello i am an alert from javascript" in the external html 
--console message saying hello java script in the html that is internal 
+# Day-1 date-05/07/2025
+**introduction**
+**setup**
+**hello**
+**what is java script? why do we use it ?how does java script work in the webpage**
+**different ways to implement java script**
+**how to link js file to html**
+**consolo.log what and why we use it (common for rest two)**
+**alert** 
+**document.write**
+**can we run javascript without html and css and if yes how ?** 
+**task1-create a new repository called java script basics**  
+**in that repository make a html page called index.html**
+**a button with alert saying "hello i am an alert from javascript" in the external html** 
+**console message saying hello java script in the html that is internal** 
