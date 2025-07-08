@@ -28,3 +28,15 @@
 - **create all the different type of variables tha you have learnt in the new webpage**
 - **dsiplay them by writing the data type then the value of that variable and log rtheir values as well and find the type of each in the log**
 
+# Day-3 date-07/07/2025
+
+## theory
+- **operators,their types,subtype**
+- **control flows and their types**
+
+## Task
+- **write a program that checksw if a number is even or odd and prints a statement that says the given number is even or odd**
+- **write a switch that logs the day of the week** 
+-**seperate for each**
+
+
