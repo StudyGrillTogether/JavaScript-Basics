@@ -39,4 +39,17 @@
 - **write a switch that logs the day of the week** 
 -**seperate for each**
 
+# Day 4 date-09/07/2025
+
+## Theory
+- **Learn what are loops and how they work in js**
+- **For, While, DO-While**
+- **What is break and continue statements and their uses**
+- **Is it a good practice to use the above statements?**
+
+## Task 
+- **Loop 1-10 using each loop**
+- **Print every 2nd number from 20-0 using loops**
+
+
 
