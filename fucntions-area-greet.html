@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>calculating the area of rectangle</h2>
+        <p id="demo"></p>
+        <script>
+            const length=prompt("enter the length");
+            const breadth=prompt("enter the breadth");
+            function area(x1,x2){
+                const area=x1*x2;
+                return area;
+            }
+            recarea=area(length,breadth);
+            document.getElementById("demo").innerHTML+="the area of rectangle is "+ recarea+"<br>";
+            const name=prompt("enter your name");
+            function greet(name){
+                document.getElementById("demo").innerHTML+="Hello my name is "+name;
+            }
+            greet(name);
+        </script>
+    </body>
+</html>

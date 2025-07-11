@@ -51,5 +51,21 @@
 - **Loop 1-10 using each loop**
 - **Print every 2nd number from 20-0 using loops**
 
+# Day 5 and 6 date-10/07/2025
+## Theory
+-**functions** 
+-**what are functions in java script** 
+-**what is the need of functions in javascript**
+-**function declaration + parameterts + return calues +basic function expressions**
+-**what are arrays**
+-**what are all the inubuilt features of arrays in java script(methods of arrays)**
+-**looping through an array(for, foreach)**
+-**what is caching? how does browser do caching ?**
+-**how caching comes into picture with java script**
 
+# tasks
+-**write a function to calculate area of rectangle and print it on the screen**
+-**write a function called greet (name ) which returns hellomy name is the parameter that you sent the function**
+-**above twoin one file**
+-**create an array of five colors loop through the array and log each color have two buttons one to add a new color to the array and one to remove one color from the array**
 
