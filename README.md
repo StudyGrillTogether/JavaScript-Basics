@@ -69,3 +69,24 @@
 -**above twoin one file**
 -**create an array of five colors loop through the array and log each color have two buttons one to add a new color to the array and one to remove one color from the array**
 
+# Day 7
+
+## Theory
+- **Topic - Object and methods**
+- **What are object literals?**
+- **Accessing and updating properties of objects?**
+-**What are object methods? How to use and call them?** 
+- **What is 'this' keyword? Why do we use it.**
+- **What are arrays of object?**
+- **Learn how to store objects inside an array.**
+- **Looping over arrays of objects**
+- **Editing and deleting an object from arrays of object.**
+
+## Task
+
+- **Create a page where there is an array of 5 products (name, Description, price). Loop over them and display it on the page.**
+
+- **Create a page where you have an object called person with name, age, address, city and email
+Add a method 'introduce()' which will log full sentence with all details of the person
+Add a method to delete the email of the person when to give the name of the person**
+

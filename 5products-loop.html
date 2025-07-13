@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo">
+        </p>
+        <script>
+            const products=[
+                {name:"tshirt",description:"white",price:2400},
+                {name:"shoes",description:"black",price:2400},
+                {name:"shirt",description:"blue",price:2400},
+                {name:"watch",description:"red",price:2400},
+                {name:"chain",description:"green",price:2400},
+            ];
+            txt="";
+            products.forEach(myFucntion);
+            
+            function myFucntion(value,index,array){
+                txt+="name:"+ value.name +"<br>";
+                txt+="description:"+value.description+"<br>";
+                txt+="price:"+value.price+"<br>";
+            }
+            document.getElementById("demo").innerHTML=txt +"<br>"
+        </script>
+    </body>
+</html>

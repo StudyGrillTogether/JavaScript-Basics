@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <button onclick="person.deleteemail()">delete email here</button>
+        <script>
+            const person={}
+            person.firstname="john";
+            person.age=20;
+            person.adress="brooklyn street";
+            person.city="london";
+            person.email="johndoe@gmail.com"
+            person.introduce=function(){
+                    return "my name is "+ this.firstname+ " my age is "+this.age+ " i live in "+this.adress+" "+this.city+" my email id is "+this.email+"<br>";
+                }
+            document.getElementById("demo").innerHTML+=person.introduce()+"<br>";
+            person.deleteemail=function(){
+                delete person.email;
+                document.getElementById("demo").innerHTML+="after deleting email"+"<br>";
+                document.getElementById("demo").innerHTML+=person.introduce();
+            }
+            
+        </script>
+    </body>
+</html>
