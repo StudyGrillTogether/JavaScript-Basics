@@ -2,6 +2,7 @@
 <html>
     <body>
         <p id="demo"></p>
+        <input type="text" id="nameinput" placeholder="Enter name to delete email">
         <button onclick="person.deleteemail()">delete email here</button>
         <script>
             const person={}
@@ -15,9 +16,16 @@
                 }
             document.getElementById("demo").innerHTML+=person.introduce()+"<br>";
             person.deleteemail=function(){
-                delete person.email;
-                document.getElementById("demo").innerHTML+="after deleting email"+"<br>";
-                document.getElementById("demo").innerHTML+=person.introduce();
+                let entername=document.getElementById("nameinput").value;
+                if(entername===person.firstname){
+                    delete person.email;
+                    document.getElementById("demo").innerHTML+="after deleting email"+"<br>";
+                    document.getElementById("demo").innerHTML+=person.introduce();
+                }
+                else{
+                    document.getElementById("demo").innerHTML+="name does not match"+"<br>";
+                }
+                
             }
             
         </script>
