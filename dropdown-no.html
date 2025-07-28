@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <label>select one of the five numbers</label>
+        <select id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <select id="alphabets" style="display: none;">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+        </select>
+        <button type="button" onclick="changedropdown()">change dropdown</button>
+        <script>
+            function changedropdown(){
+                const para1=document.getElementById("select1");
+                const para2=document.getElementById("alphabets");
+                para1.innerHTML=para2.innerHTML;
+            }
+        </script>
+    </body>
+</html>
