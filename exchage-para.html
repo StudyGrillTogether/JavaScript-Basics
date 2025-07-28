@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p> a paragraph from the book</p>
+        <p id="demo"></p>
+        <p id="main">
+            a man walking down a road saw a stone and walked over it
+        </p>
+        <button onclick="paragraphchange()">click to change paragrapgh</button>
+        <p id="main2" style="display: none;">
+            another man with his bike passed through the same road and crushed the stone 
+        </p>
+        <script>
+            function paragraphchange(){
+                const para1=document.getElementById("main2");
+                const para2=document.getElementById("main");
+                para2.innerHTML=para1.innerHTML;
+            }
+        </script>
+    </body>
+</html>
