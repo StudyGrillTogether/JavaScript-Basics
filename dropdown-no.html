@@ -17,13 +17,20 @@
             <option value="d">d</option>
             <option value="e">e</option>
         </select>
-        <button type="button" onclick="changedropdown()">change dropdown</button>
+        <button type="button" onclick="changedropdown()">change dropdown to alphabets</button>
+        <input id="sub" type="submit" value="submit" onclick="printselect()">
+        <div id="disp"></div>
         <script>
             function changedropdown(){
                 const para1=document.getElementById("select1");
                 const para2=document.getElementById("alphabets");
                 para1.innerHTML=para2.innerHTML;
             }
+            let btn = document.querySelector("#sub");
+            let sel1 = document.querySelector("#select1");
+            btn.addEventListener('click', function(){
+                disp.textContent = sel1.value;
+            })
         </script>
     </body>
 </html>
