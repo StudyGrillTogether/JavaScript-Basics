@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="changecolor(this)" onmouseover="mover(this)" onmouseout="mout(this)"style="background-color:#D94A38;width: 200px;height:50px;padding:40px">click me </button>
+        <p id="demo"></p>
+        <script>
+        function mover(obj){
+           obj.style.backgroundColor="#1ec5e5";
+        }
+        function mout(obj){
+            obj.style.backgroundColor="#D94A38";
+        }
+        function changecolor(obj){
+            document.getElementById("demo").innerHTML="change";
+        }
+    </script>
+    </body>
+    
+
+</html>
