@@ -90,3 +90,12 @@
 Add a method 'introduce()' which will log full sentence with all details of the person
 Add a method to delete the email of the person when to give the name of the person**
 
+# Day 8
+## Theory
+- introduction to dom manipulation
+- what is dom?use of dom, how is dom important for dynamic webpages
+- wha is "document" in javascript
+- different methods to manipulate dom(example .getElemenybyid(),query selector,innertext,innerhtml etc)
+# Task
+- in anew webpage create a paragraph from your fav book and add a button in html on click of the button change the paragraph text to another paragraph from the book using JS
+- create a drop down with 1-5 numbers ,add another button which will change the values of the dropdown from numbers to alphabets (a-e).on selecting any value from the drop down the selected value should be shown on the webpage 
