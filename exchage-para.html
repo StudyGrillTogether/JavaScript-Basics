@@ -7,15 +7,18 @@
             a man walking down a road saw a stone and walked over it
         </p>
         <button onclick="paragraphchange()">click to change paragrapgh</button>
-        <p id="main2" style="display: none;">
-            another man with his bike passed through the same road and crushed the stone 
-        </p>
+        <button onclick="paragraphchange1()">click to revert</button>
+        
         <script>
+            const para1="another man with his bike passed through the same road and crushed the stone";
+            const para2= "a man walking down a road saw a stone and walked over it"
             function paragraphchange(){
-                const para1=document.getElementById("main2");
-                const para2=document.getElementById("main");
-                para2.innerHTML=para1.innerHTML;
+                document.getElementById("main").innerHTML=para1;
             }
+            function paragraphchange1(){
+                document.getElementById("main").innerHTML=para2;
+            }
+            
         </script>
     </body>
 </html>
