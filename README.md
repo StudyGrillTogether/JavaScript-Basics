@@ -99,3 +99,17 @@ Add a method to delete the email of the person when to give the name of the pers
 # Task
 - in anew webpage create a paragraph from your fav book and add a button in html on click of the button change the paragraph text to another paragraph from the book using JS
 - create a drop down with 1-5 numbers ,add another button which will change the values of the dropdown from numbers to alphabets (a-e).on selecting any value from the drop down the selected value should be shown on the webpage 
+
+# Day9
+
+## Theory
+- make the previous day tasks more efficient
+thoery-
+- dom events ?what are dom events how do they work
+- what is add event listener? 
+- what are all the different types of events 
+
+## tasks
+- create an input field and change the color of the input field whenever you type anything inside in that input
+- add a large button and add a hover effect to change the background color and text of the button
+- keyup,
