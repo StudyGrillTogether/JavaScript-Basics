@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>xml files</title>
+    </head>
+    <body>
+        <h2>student data</h2>
+        <button id="createXML">Create XML</button><!--button to create and download the xml file-->
+        <input type="file" id="xmlFile" accept=".xml" style="display: none;">
+        <button id="getData">GET STUDENT DATA</button>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Roll.no</th>
+                    <th>Name</th>
+                    <th>Adress</th>
+                    <th>date of birth</th>
+                </tr>
+            </thead>
+            <tbody id="tabblebody"></tbody>
+            <script>
+                const createBtn=document.getElementById("createXML");
+                const getBtn=document.getElementById("getData");
+                const fileInput=document.getElementById("xmlfile");
+                const table=document.getElementById("studentTable");
+                const tableBody=document.getElementById("tableBody");
+
+                //creating an xml file and downloading it 
+                createBtn.addEventListener("click",function(){
+                    const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
+                    <Students>
+    <Student>
+        <RollNo>101</RollNo>
+        <Name>John Doe</Name>
+        <Address>123 Main Street, New York, USA</Address>
+        <DOB>2002-05-15</DOB>
+    </Student>
+    <Student>
+        <RollNo>102</RollNo>
+        <Name>Jane Smith</Name>
+        <Address>456 Elm Avenue, Los Angeles, USA</Address>
+        <DOB>2003-08-21</DOB>
+    </Student>
+</Students>`;
+            const blob=new Blob([xmlContent],{type:"application/xml"});
+            const link=document.createElement("a");
+            link.href=URL.createObjectURL(blob);
+            link.download="student_data.xml";
+            link.click();
+
+                })
+            getBtn.addEventListener("click", function() {
+            fileInput.click(); 
+        });
+        fileInput.addEventListener("change",function(){
+            const file=this.files[0];
+            if(!file) return;
+        })
+            </script>
+        </table>
+    </body>
+</html>
