@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>write and save your file</title>
+        <title>
+            select and read and write file here
+        </title>
     </head>
     <body>
-        <h2>type your text here</h2>
-        <textarea id="editor" rows="12" cols="40" placeholder="write your text here">   
-        </textarea>
+        <h3>select a file to read and edit</h3>
+        <input type="file" id="fileinput">
         <br>
-        <button id="saveBtn">save your file </button>
+        <textarea id="editor" rows="12" cols="60" placeholder="file contents will appear here"></textarea>
+        <!--you can write and edit stuff here-->
+        <button id="saveBtn">SAVE FILE </button>
+        <!--to save the edited file we need this button-->
+
         <script>
+            const fileinput=document.getElementById("fileinput");
             const editor=document.getElementById("editor");
             const saveBtn=document.getElementById("saveBtn");
-            let currentFileName="mytext.txt";
-            saveBtn.addEventListener('click',function(){
-                const blob=new Blob([editor.value],{type:"text/plain"});
-                const link=document.createElement("a");
-                link.href=URL.createObjectURL(blob);
-                link.download=currentFileName;
-                link.click();
-
+            // to work on these things with seperate ids and use them for different funtionality as it is made for
+            let currentFileName="output.txt";
+            fileinput.addEventListener('change', function(){
+                const file=this.files[0];
+                if(file){
+                    currentFileName=file.name;
+                    const reader=new FileReader;
+                    reader.onload=function(){
+                        editor.value=reader.result;
+                    }
+                    reader.readAsText(file);
+                }
+                else{
+                    alert("you did not select a file");
+                }
             })
+            saveBtn.addEventListener('click',function(){//link to make a new file from the text there
+                const blob=new Blob([editor.value],{type:"text/plain"});//putting the edited wordws into blob like packing them into a new container
+                const link=document.createElement("a");// make an invisible link 
+                link.href=URL.createObjectURL(blob);// put it  in our nwe blob, it makes a temporary web adress that points to the blobs data
+                link.download=currentFileName;//give it the file's name 
+                link.click();//trigger download 
+            })
+            //Blob is just a container kind of like a virtual file that lives in your browser's memory
+            //Blob=a box , you can put things inside the box (like text,images or  data) 
+            //te box saves tha info
+            //you can save this box thus downloadable file
+            
         </script>
     </body>
 </html>
