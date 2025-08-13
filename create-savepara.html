@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>write and save your file</title>
+    </head>
+    <body>
+        <h2>type your text here</h2>
+        <textarea id="editor" rows="12" cols="40" placeholder="write your text here">   
+        </textarea>
+        <br>
+        <button id="saveBtn">save your file </button>
+        <script>
+            const editor=document.getElementById("editor");
+            const saveBtn=document.getElementById("saveBtn");
+            let currentFileName="mytext.txt";
+            saveBtn.addEventListener('click',function(){
+                const blob=new Blob([editor.value],{type:"text/plain"});
+                const link=document.createElement("a");
+                link.href=URL.createObjectURL(blob);
+                link.download=currentFileName;
+                link.click();
+
+            })
+        </script>
+    </body>
+</html>
