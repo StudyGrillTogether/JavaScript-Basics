@@ -113,3 +113,38 @@ thoery-
 - create an input field and change the color of the input field whenever you type anything inside in that input
 - add a large button and add a hover effect to change the background color and text of the button
 - keyup,
+
+# DAY 10
+day -10
+- **a task should be editable in to do and in progress even while moving from completed
+**- even after refreshing a page the tasks should be visible or after closing and opening the tasks should not disappear 
+theory
+- learn about how to read and write a file using javascript 
+- learn specifically about reading and writing xml files in javascript 
+- what is xml file,why do we use xml file 
+task
+1.
+- create a page where you have an text area to write paragraphs and have a save button 
+- after clicking the save button the text from the text area should be saved in a text file
+- add a button called read after clicking the read button it should read the text file we have just created and display the contents on the screen 
+
+2.
+- create a page which will have a button called create xml after clicking the button you should ccreate an xml called student data.xml add another button called get student data after clicking the button it should read the student data.xml get the data of students from xml and show it in a tabular format 
+- -sample
+<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+    <Student>
+        <RollNo>101</RollNo>
+        <Name>John Doe</Name>
+        <Address>123 Main Street, New York, USA</Address>
+        <DOB>2002-05-15</DOB>
+    </Student>
+    <Student>
+        <RollNo>102</RollNo>
+        <Name>Jane Smith</Name>
+        <Address>456 Elm Avenue, Los Angeles, USA</Address>
+        <DOB>2003-08-21</DOB>
+    </Student>
+</Students>
+
+
