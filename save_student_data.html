@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            select and read and write file here
+        </title>
+    </head>
+    <body>
+        <h3>select a file to read and edit</h3>
+        <input type="file" id="fileinput">
+        <br>
+        <textarea id="editor" rows="12" cols="60" placeholder="file contents will appear here"></textarea>
+        <!--you can write and edit stuff here-->
+        <button id="saveBtn">Create XML </button>
+        <!--to save the edited file we need this button-->
+        <button id="getdata">get student data</button>
+        <!--to get student data will show the student data as a table-->
+        <div id="studenttable"></div>
+        <!--this is where the srudent data will appear as table-->
+
+        <script>
+            const fileinput=document.getElementById("fileinput");
+            const editor=document.getElementById("editor");
+            const saveBtn=document.getElementById("saveBtn");
+            const getdata=document.getElementById("getdata");
+            const studenttable=document.getElementById("studenttable");
+            // to work on these things with seperate ids and use them for different funtionality as it is made for
+            let currentFileName="output.xml";
+            fileinput.addEventListener('change', function(){
+                const file=this.files[0];
+                if(file){
+                    currentFileName=file.name;
+                    const reader=new FileReader;
+                    reader.onload=function(){
+                        editor.value=reader.result;
+                    }
+                    reader.readAsText(file);
+                }
+                else{
+                    alert("you did not select a file");
+                }
+            })
+            saveBtn.addEventListener('click',function(){//link to make a new file from the text there
+                const blob=new Blob([editor.value],{type:"text/plain"});//putting the edited wordws into blob like packing them into a new container
+                const link=document.createElement("a");// make an invisible link 
+                link.href=URL.createObjectURL(blob);// put it  in our nwe blob, it makes a temporary web adress that points to the blobs data
+                link.download=currentFileName;//give it the file's name 
+                link.click();//trigger download 
+            })
+            //Blob is just a container kind of like a virtual file that lives in your browser's memory
+            //Blob=a box , you can put things inside the box (like text,images or  data) 
+            //te box saves tha info
+            //you can save this box thus downloadable file
+            getdata.addEventListener('click',function(){
+                const xmlText=editor.value.trim();//gets the text area wit id editor and trim removes extra spaces if text area empty
+                //after trimming it shows error 
+                if(!xmlText){
+                    alert("no xml file here");
+                    return;
+                }
+                const parser=new DOMParser();//used for converting xml strings into structured XML
+                //parses text string into xml doc object
+                const xmldoc=parser.parseFromString(xmlText,"application/xml");
+                if(xmldoc.getElementsByTagName("parsererror").length>0){
+                    alert("invalid xml data");
+                    return;
+                    //checks if the parsing failed by looking for any parser error tags in the xml
+                    //doc if found alerts invalid
+                }
+                const students=xmldoc.getElementsByTagName("Student");
+                if(students.length===0){
+                        studenttable.innerHTML="no students dound inside the xml";
+                        return;
+                    }
+                let tableHTML = `<table border="1" cellpadding="5">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>DOB</th>
+                    </tr>`;// built a table as a string inside a variable 
+                for (let i = 0; i < students.length; i++) {//created a loop then that runs throught the student nodes in xml file
+                const student = students[i];
+                const rollno = student.getElementsByTagName("RollNo")[0]?.textContent || '';
+                const name = student.getElementsByTagName("Name")[0]?.textContent || '';
+                const address = student.getElementsByTagName("Address")[0]?.textContent || '';
+                const dob = student.getElementsByTagName("DOB")[0]?.textContent || '';
+                //here we fetch the each data by their tag name  || provides an empty string if any tag is missing
+                tableHTML += `<tr>
+                    <td>${rollno}</td>
+                    <td>${name}</td>
+                    <td>${address}</td>
+                    <td>${dob}</td>
+                </tr>`;
+                //adding a new table row to your table html string 
+                // for each student rdetail we put inside the table cell
+        }
+        tableHTML += `</table>`;//displays table and adda  closing table tag
+        studenttable.innerHTML = tableHTML; 
+            })
+            
+        </script>
+    </body>
+</html>
