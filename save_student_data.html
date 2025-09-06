@@ -7,11 +7,11 @@
     </head>
     <body>
         <h3>select a file to read and edit</h3>
-        <input type="file" id="fileinput">
+        <input type="file" id="fileinput"> <!--took the file-->
         <br>
         <textarea id="editor" rows="12" cols="60" placeholder="file contents will appear here"></textarea>
         <!--you can write and edit stuff here-->
-        <button id="saveBtn">Create XML </button>
+        <button id="saveBtn" onclick="">Create XML </button>
         <!--to save the edited file we need this button-->
         <button id="getdata">get student data</button>
         <!--to get student data will show the student data as a table-->
@@ -29,7 +29,7 @@
             fileinput.addEventListener('change', function(){
                 const file=this.files[0];
                 if(file){
-                    currentFileName=file.name;
+                    
                     const reader=new FileReader;
                     reader.onload=function(){
                         editor.value=reader.result;
@@ -40,6 +40,7 @@
                     alert("you did not select a file");
                 }
             })
+            
             saveBtn.addEventListener('click',function(){//link to make a new file from the text there
                 const blob=new Blob([editor.value],{type:"text/plain"});//putting the edited wordws into blob like packing them into a new container
                 const link=document.createElement("a");// make an invisible link 
@@ -47,6 +48,7 @@
                 link.download=currentFileName;//give it the file's name 
                 link.click();//trigger download 
             })
+            
             //Blob is just a container kind of like a virtual file that lives in your browser's memory
             //Blob=a box , you can put things inside the box (like text,images or  data) 
             //te box saves tha info

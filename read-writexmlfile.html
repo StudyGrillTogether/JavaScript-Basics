@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>xml files</title>
-    </head>
-    <body>
-        <h2>student data</h2>
-        <button id="createXML">Create XML</button><!--button to create and download the xml file-->
-        <input type="file" id="xmlFile" accept=".xml" style="display: none;">
-        <button id="getData">GET STUDENT DATA</button>
-        <table id="studentTable">
-            <thead>
-                <tr>
-                    <th>Roll.no</th>
-                    <th>Name</th>
-                    <th>Adress</th>
-                    <th>date of birth</th>
-                </tr>
-            </thead>
-            <tbody id="tabblebody"></tbody>
-            <script>
-                const createBtn=document.getElementById("createXML");
-                const getBtn=document.getElementById("getData");
-                const fileInput=document.getElementById("xmlfile");
-                const table=document.getElementById("studentTable");
-                const tableBody=document.getElementById("tableBody");
+<head>
+    <title>xml files</title>
+</head>
+<body>
+    <h2>student data</h2>
+    <button id="createXML">Create XML</button><!--button to create and download the xml file-->
+    <button id="getData">GET STUDENT DATA</button>
+    <table id="studentTable" border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Roll.no</th>
+                <th>Name</th>
+                <th>Adress</th>
+                <th>date of birth</th>
+            </tr>
+        </thead>
+        <tbody id="tabblebody"></tbody>
+    </table>
 
-                //creating an xml file and downloading it 
-                createBtn.addEventListener("click",function(){
-                    const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-                    <Students>
+    <script>
+        const createBtn = document.getElementById("createXML");
+        const getBtn = document.getElementById("getData");
+        const tableBody = document.getElementById("tabblebody");
+
+        const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
+<Students>
     <Student>
         <RollNo>101</RollNo>
         <Name>John Doe</Name>
@@ -42,21 +39,42 @@
         <DOB>2003-08-21</DOB>
     </Student>
 </Students>`;
-            const blob=new Blob([xmlContent],{type:"application/xml"});
-            const link=document.createElement("a");
-            link.href=URL.createObjectURL(blob);
-            link.download="student_data.xml";
-            link.click();
 
-                })
-            getBtn.addEventListener("click", function() {
-            fileInput.click(); 
+        // Creating and downloading XML file
+        createBtn.addEventListener("click", function() {
+            const blob = new Blob([xmlContent], { type: "application/xml" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "student_data.xml";
+            link.click();
         });
-        fileInput.addEventListener("change",function(){
-            const file=this.files[0];
-            if(!file) return;
-        })
-            </script>
-        </table>
-    </body>
+
+        // Parse xmlContent and display data in table
+        getBtn.addEventListener("click", function() {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlContent, "application/xml");
+            const students = xmlDoc.getElementsByTagName("Student");
+
+            // Clear existing table rows
+            tableBody.innerHTML = "";
+
+            // Loop through students and add rows
+            for (let i = 0; i < students.length; i++) {
+                const rollNo = students[i].getElementsByTagName("RollNo")[0]?.textContent || "";
+                const name = students[i].getElementsByTagName("Name")[0]?.textContent || "";
+                const address = students[i].getElementsByTagName("Address")[0]?.textContent || "";
+                const dob = students[i].getElementsByTagName("DOB")[0]?.textContent || "";
+
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${rollNo}</td>
+                    <td>${name}</td>
+                    <td>${address}</td>
+                    <td>${dob}</td>
+                `;
+                tableBody.appendChild(row);
+            }
+        });
+    </script>
+</body>
 </html>
