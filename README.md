@@ -1,136 +1,162 @@
-# Day-1 date-05/07/2025
-##Topics covered 
-- **introduction**
-- **setup**
-- **hello**
-  ## Theory
-- **what is java script? why do we use it ?how does java script work in the webpage**
-- **different ways to implement java script**
-- **how to link js file to html**
-- **consolo.log what and why we use it (common for rest two)**
-- **alert** 
-- **document.write**
-- **can we run javascript without html and css and if yes how ?**
-  ## TASK 1
-- **create a new repository called java script basics**  
-- **in that repository make a html page called index.html**
-- **a button with alert saying "hello i am an alert from javascript" in the external html** 
-- **console message saying hello java script in the html that is internal** 
+# JavaScript Learning Journey
 
-# Day-2 date-06/07/2025
+## Day 1 - 05/07/2025
 
-## theory
-- **what are variables and data types in JS**
-- **learn all different types of fata types in JS**
-- **what is let,const,var in JS and what is the difference between them**
-- **how to find the type of variable in Js**
-# task
-- **create all the different type of variables tha you have learnt in the new webpage**
-- **dsiplay them by writing the data type then the value of that variable and log rtheir values as well and find the type of each in the log**
+### Topics Covered
+- Introduction
+- Setup
+- Hello World
 
-# Day-3 date-07/07/2025
+### Theory
+- What is JavaScript? Why do we use it? How does JavaScript work in the webpage?
+- Different ways to implement JavaScript
+- How to link JS file to HTML
+- Console.log - what and why we use it (common for rest two)
+- Alert
+- Document.write
+- Can we run JavaScript without HTML and CSS and if yes how?
 
-## theory
-- **operators,their types,subtype**
-- **control flows and their types**
+### Task 1
+- Create a new repository called `javascript-basics`
+- In that repository make an HTML page called `index.html`
+- Create a button with an alert saying "hello i am an alert from javascript" in external HTML
+- Add a console message saying "hello javascript" in the HTML that is internal
 
-## Task
-- **write a program that checksw if a number is even or odd and prints a statement that says the given number is even or odd**
-- **write a switch that logs the day of the week** 
--**seperate for each**
+---
 
-# Day 4 date-09/07/2025
+## Day 2 - 06/07/2025
 
-## Theory
-- **Learn what are loops and how they work in js**
-- **For, While, DO-While**
-- **What is break and continue statements and their uses**
-- **Is it a good practice to use the above statements?**
+### Theory
+- What are variables and data types in JavaScript?
+- Learn all different types of data types in JavaScript
+- What is let, const, var in JavaScript and what is the difference between them?
+- How to find the type of variable in JavaScript?
 
-## Task 
-- **Loop 1-10 using each loop**
-- **Print every 2nd number from 20-0 using loops**
+### Task
+- Create all the different types of variables that you have learnt in a new webpage
+- Display them by writing the data type then the value of that variable
+- Log their values as well and find the type of each in the console
 
-# Day 5 and 6 date-10/07/2025
-## Theory
--**functions** 
--**what are functions in java script** 
--**what is the need of functions in javascript**
--**function declaration + parameterts + return calues +basic function expressions**
--**what are arrays**
--**what are all the inubuilt features of arrays in java script(methods of arrays)**
--**looping through an array(for, foreach)**
--**what is caching? how does browser do caching ?**
--**how caching comes into picture with java script**
+---
 
-# tasks
--**write a function to calculate area of rectangle and print it on the screen**
--**write a function called greet (name ) which returns hellomy name is the parameter that you sent the function**
--**above twoin one file**
--**create an array of five colors loop through the array and log each color have two buttons one to add a new color to the array and one to remove one color from the array**
+## Day 3 - 07/07/2025
 
-# Day 7
+### Theory
+- Operators and their types, subtypes
+- Control flows and their types
 
-## Theory
-- **Topic - Object and methods**
-- **What are object literals?**
-- **Accessing and updating properties of objects?**
--**What are object methods? How to use and call them?** 
-- **What is 'this' keyword? Why do we use it.**
-- **What are arrays of object?**
-- **Learn how to store objects inside an array.**
-- **Looping over arrays of objects**
-- **Editing and deleting an object from arrays of object.**
+### Task
+- Write a program that checks if a number is even or odd and prints a statement that says the given number is even or odd
+- Write a switch that logs the day of the week
+- Keep them separate for each
 
-## Task
+---
 
-- **Create a page where there is an array of 5 products (name, Description, price). Loop over them and display it on the page.**
+## Day 4 - 09/07/2025
 
-- **Create a page where you have an object called person with name, age, address, city and email
-Add a method 'introduce()' which will log full sentence with all details of the person
-Add a method to delete the email of the person when to give the name of the person**
+### Theory
+- Learn what are loops and how they work in JavaScript
+- For, While, Do-While
+- What is break and continue statements and their uses?
+- Is it a good practice to use the above statements?
 
-# Day 8
-## Theory
-- introduction to dom manipulation
-- what is dom?use of dom, how is dom important for dynamic webpages
-- wha is "document" in javascript
-- different methods to manipulate dom(example .getElemenybyid(),query selector,innertext,innerhtml etc)
-# Task
-- in anew webpage create a paragraph from your fav book and add a button in html on click of the button change the paragraph text to another paragraph from the book using JS
-- create a drop down with 1-5 numbers ,add another button which will change the values of the dropdown from numbers to alphabets (a-e).on selecting any value from the drop down the selected value should be shown on the webpage 
+### Task
+- Loop 1-10 using each loop
+- Print every 2nd number from 20-0 using loops
 
-# Day9
+---
 
-## Theory
-- make the previous day tasks more efficient
-thoery-
-- dom events ?what are dom events how do they work
-- what is add event listener? 
-- what are all the different types of events 
+## Day 5 & 6 - 10/07/2025
 
-## tasks
-- create an input field and change the color of the input field whenever you type anything inside in that input
-- add a large button and add a hover effect to change the background color and text of the button
-- keyup,
+### Theory
+- Functions
+- What are functions in JavaScript?
+- What is the need of functions in JavaScript?
+- Function declaration + parameters + return values + basic function expressions
+- What are arrays?
+- What are all the inbuilt features of arrays in JavaScript (methods of arrays)?
+- Looping through an array (for, forEach)
+- What is caching? How does browser do caching?
+- How caching comes into picture with JavaScript?
 
-# DAY 10
-day -10
-- **a task should be editable in to do and in progress even while moving from completed
-**- even after refreshing a page the tasks should be visible or after closing and opening the tasks should not disappear 
-theory
-- learn about how to read and write a file using javascript 
-- learn specifically about reading and writing xml files in javascript 
-- what is xml file,why do we use xml file 
-task
-1.
-- create a page where you have an text area to write paragraphs and have a save button 
-- after clicking the save button the text from the text area should be saved in a text file
-- add a button called read after clicking the read button it should read the text file we have just created and display the contents on the screen 
+### Tasks
+- Write a function to calculate area of rectangle and print it on the screen
+- Write a function called `greet(name)` which returns "hello my name is [parameter]" where the parameter is the name you sent to the function
+- Keep both in one file
+- Create an array of five colors, loop through the array and log each color. Have two buttons - one to add a new color to the array and one to remove a color from the array
 
-2.
-- create a page which will have a button called create xml after clicking the button you should ccreate an xml called student data.xml add another button called get student data after clicking the button it should read the student data.xml get the data of students from xml and show it in a tabular format 
-- -sample
+---
+
+## Day 7 - Object and Methods
+
+### Theory
+- Topic - Object and methods
+- What are object literals?
+- Accessing and updating properties of objects?
+- What are object methods? How to use and call them?
+- What is 'this' keyword? Why do we use it?
+- What are arrays of objects?
+- Learn how to store objects inside an array
+- Looping over arrays of objects
+- Editing and deleting an object from arrays of objects
+
+### Tasks
+- Create a page where there is an array of 5 products (name, description, price). Loop over them and display it on the page
+- Create a page where you have an object called `person` with name, age, address, city and email
+  - Add a method `introduce()` which will log a full sentence with all details of the person
+  - Add a method to delete the email of the person when you give the name of the person
+
+---
+
+## Day 8 - Introduction to DOM Manipulation
+
+### Theory
+- Introduction to DOM manipulation
+- What is DOM? Use of DOM, how is DOM important for dynamic webpages?
+- What is "document" in JavaScript?
+- Different methods to manipulate DOM (example: `.getElementById()`, query selector, innertext, innerHTML etc)
+
+### Tasks
+- In a new webpage create a paragraph from your favorite book and add a button in HTML. On click of the button change the paragraph text to another paragraph from the book using JavaScript
+- Create a dropdown with 1-5 numbers. Add another button which will change the values of the dropdown from numbers to alphabets (a-e). On selecting any value from the dropdown the selected value should be shown on the webpage
+
+---
+
+## Day 9 - DOM Events
+
+### Theory
+- Make the previous day tasks more efficient
+- DOM events - what are DOM events? How do they work?
+- What is addEventListener?
+- What are all the different types of events?
+
+### Tasks
+- Create an input field and change the color of the input field whenever you type anything inside it
+- Add a large button and add a hover effect to change the background color and text of the button
+- Learn about keyup events
+
+---
+
+## Day 10 - Local Storage & File Handling
+
+### Theory
+- Learn about how to read and write a file using JavaScript
+- Learn specifically about reading and writing XML files in JavaScript
+- What is an XML file? Why do we use XML files?
+
+### Tasks
+
+#### Task 1: Text File Save & Read
+- Create a page where you have a text area to write paragraphs and have a save button
+- After clicking the save button the text from the text area should be saved in a text file
+- Add a button called "Read". After clicking the read button it should read the text file you have just created and display the contents on the screen
+
+#### Task 2: XML File with Student Data
+- Create a page which will have a button called "Create XML". After clicking the button you should create an XML file called `studentdata.xml`
+- Add another button called "Get Student Data". After clicking the button it should read the `studentdata.xml`, get the data of students from XML and show it in a tabular format
+
+**Sample XML Structure:**
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Students>
     <Student>
@@ -146,5 +172,3 @@ task
         <DOB>2003-08-21</DOB>
     </Student>
 </Students>
-
-
